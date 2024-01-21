@@ -5,11 +5,25 @@
  */
 
 // Using a for loop
-
+let nums = [1,2,3,4,5];
+let results = [];
+for (let num of nums){
+  results.push(num*2);
+}
+console.log(results);
 
 // Using map()
 
+// const mulByTwo = function(num){
+//   return num * 2;
+// };
+let mapR = nums.map(function(num){return num * 2})
+console.log(mapR);
+// let mapResults = nums.map(mulByTwo);
+// console.log(mapResults);
+let mapResult = nums.map(num=>num*2);
 
+console.log(mapResult);
 // Simplified w/ map()
 
 
@@ -37,3 +51,6 @@ const students = [
     skill: 'CSS'
   },
 ];
+
+let studentsWithIds = students.map(student => [student.name, student.id]);
+console.log(studentsWithIds);
